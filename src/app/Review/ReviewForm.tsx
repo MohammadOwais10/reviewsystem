@@ -22,28 +22,32 @@ const ReviewForm: React.FC<ReviewFormTypes> = ({ onClose, onSubmit }) => {
         <button
           onClick={onClose}
           className="text-gray-500 hover:text-gray-700"
-          aria-label="Close review form">
+          aria-label="Close review form"
+        >
           <svg
             width="36"
             height="36"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2">
+            stroke-width="2"
+          >
             <path d="M18 6 6 18" />
             <path d="m6 6 12 12" />
           </svg>
         </button>
-        <h2 className="text-3xl font-semibold mb-8">Leave a review</h2>
+        <h2 className="text-3xl font-semibold mb-8 text-black">
+          Leave a review
+        </h2>
 
         <div className="border-b border-gray-200 pb-4 mb-4">
-          <h3 className="text-xl font-semibold">Safety</h3>
+          <h3 className="text-xl font-semibold text-black">Safety</h3>
           <p className="text-slate-400">How safe did you feel with Trausti?</p>
           <StarRating rating={safetyRating} setRating={setSafetyRating} />
         </div>
 
         <div className="border-b border-gray-200 pb-4 mb-4">
-          <h3 className="text-xl font-semibold">Communication</h3>
+          <h3 className="text-xl font-semibold text-black">Communication</h3>
           <p className="text-slate-400">
             How easy was it to communicate with Trausti?
           </p>
@@ -54,7 +58,7 @@ const ReviewForm: React.FC<ReviewFormTypes> = ({ onClose, onSubmit }) => {
         </div>
 
         <div className="border-b border-gray-200 pb-4 mb-4">
-          <h3 className="text-xl font-semibold">
+          <h3 className="text-xl font-semibold text-black">
             Would you recommend Trausti?
           </h3>
           <p className="text-slate-400">Your opinion won’t post publicly</p>
@@ -62,7 +66,7 @@ const ReviewForm: React.FC<ReviewFormTypes> = ({ onClose, onSubmit }) => {
         </div>
 
         <div className="border-b border-gray-200 pb-4 mb-4">
-          <h3 className="text-xl font-semibold">Praise</h3>
+          <h3 className="text-xl font-semibold text-black">Praise</h3>
           <p className="text-slate-400">What traits best describe Trausti?</p>
           <TraitsSelector traits={traits} setTraits={setTraits} />
         </div>
@@ -74,7 +78,8 @@ const ReviewForm: React.FC<ReviewFormTypes> = ({ onClose, onSubmit }) => {
 
         <button
           onClick={handleSubmit}
-          className="w-full py-3 bg-green-500 text-white rounded-lg">
+          className="w-full py-3 bg-green-500 text-white rounded-lg"
+        >
           Publish review
         </button>
       </div>
